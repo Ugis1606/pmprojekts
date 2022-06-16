@@ -1,0 +1,14 @@
+$.ajax({
+    url: "/somewhere",
+
+
+
+    beforeSend: function(xhr) {
+        xhr.setRequestHeader("Authorization", "Basic " + window.btoa(username + ":" + password));
+    },
+
+
+    success: function(result) {
+        console.log(arguments);
+    }
+});

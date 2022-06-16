@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Piezīmju ģenerators</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+      integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk="
+      crossorigin="anonymous"
+    />
+    <link
+      href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"
+      rel="stylesheet"
+      media="all"
+    />
+  </head>
+  <body onload="Clear();">
+    <nav>
+      <div class="dropdown">
+        <button class="homebtn">
+          <a href="#"></a>
+          <i class="fas fa-home"></i>
+        </button>
+        <div class="info">
+          <button class="hvr-icon-hang">
+            Info
+            <i class="fa fa-chevron-down hvr-icon"></i>
+          </button>
+          <ul>
+            <li class="metodika">Metodika</li>
+            <li>Info2</li>
+            <li>Info3</li>
+            <li>Info4</li>
+          </ul>
+        </div>
+        <div class="riki">
+          <button class="hvr-icon-hang">
+            Rīki
+            <i class="fa fa-chevron-down hvr-icon"></i>
+          </button>
+          <ul>
+            <li class="piezimes">Piezīmes</li>
+            <li><a href="#">Rīks2</a></li>
+            <li><a href="#">Rīks3</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="pamats-home">
+      <header>
+        <h1>Kvikstep dati</h1>
+      </header>
+      <form>
+        <div class="ievadLauki">
+          <div class="pieteikumaNr">
+            Pieteikuma Nr:
+            <input type="text" />
+          </div>
+          <div class="lietotajs">
+            Lietotājs:
+            <input type="text" />
+          </div>
+          <div class="adrese">
+            Adrese:
+            <input type="text" />
+          </div>
+          <div class="raksturojums">
+            Objekta raksturojums:
+            <input type="text" />
+          </div>
+          <div class="iecirknis">
+            Iecirknis:
+            <input type="text" />
+          </div>
+        </div>
+      </form>
+      <div class="atsutitBtn">
+        <button type="submit">Atsūtīt</button>
+      </div>
+    </div>
+    <div class="pamats">
+      <header>
+        <h1>Piezīmes</h1>
+      </header>
+      <form>
+        <select name="tema" class="tema-select">
+          <option style="display: none">Izvēlies tēmu</option>
+        </select>
+        <select name="atema" class="atema-select"></select>
+      </form>
+      <textarea cols="30" rows="10" spellcheck="false"> </textarea>
+      <div class="kopet">
+        <button type="submit">Kopēt</button>
+      </div>
+      <div class="copy-container">
+        <div class="copy-popup">
+          <h3>Nokopēts!</h3>
+          <h4>&#128077;</h4>
+        </div>
+      </div>
+    </div>
+    <div class="pamats2">
+      <h1>Metodika</h1>
+      <div class="acardion">
+        <div class="acardion-item">
+          <div class="acardion-item-header">
+            Par VS tīklu izbūvi vai pārbūvi
+          </div>
+          <div class="acardion-item-body">
+            <div class="acardion-item-body-content">
+              9.4.1. Par VS EPL izbūvi/nomaiņu faktiskās izmaksas lietotājam
+              tiek aprēķinātas, ņemot vērā lietotājam minimāli nepieciešamās VS
+              EPL (no ST pielietojamajiem kabeļiem/kailvadiem/izolētiem vadiem)
+              caurlaides spējas A_VS, (skatīt 4.,5.tabulu) normālā režīma shēmā
+              līdz barojošai a/st., lai tiktu nodrošināts dU% mazāks par 5%,
+              pret izbūvējamās EPL posma caurlaides nominālās strāvas
+              lielumu;<br />
+              9.4.2. Lietotājam minimāli nepieciešamās VS EPL šķērsgriezums tiek
+              noteikts pēc lietotāja pieslēguma atļautās slodzes (kW),
+              izmantojot dU% aprēķina kalkulatoru, kurš atrodas SharePoint
+              vietnē –
+              https://stinfo.energo.lv/s/taf/objektuIzvertesanasProtokoli/SitePages/du.aspx,
+              ņemot vērā kopējo VS EPL elektrisko garumu no barojošās a/st. līdz
+              pieslēguma vietai, ieskaitot esošos EPL posmus. Ja aprēķinot
+              faktiskās izmaksas un nosakot minimāli nepieciešamo VS EPL
+              šķērsgriezumu pēc būvprojektā paredzētā kopējā VS EPL elektriskā
+              garuma, dU% ir lielāks par 5%, tad pieņem, ka tas ir lietotājam
+              minimāli nepieciešamais VS EPL šķērsgriezums.
+            </div>
+          </div>
+        </div>
+        <div class="acardion-item">
+          <div class="acardion-item-header">Par SP/KP izbūvi vai pārbūvi</div>
+          <div class="acardion-item-body">
+            <div class="acardion-item-body-content">
+              9.3.1. Par jauna VS SP/KP izbūvi vai esoša SP/KP nomaiņu vai VS
+              slēgiekārtas nomaiņu esošā VS SP/KP faktiskās izmaksas lietotājam
+              tiek aprēķinātas, ņemot vērā VS slēgiekārtas (V,C,F) pievienojumu
+              skaitu, lai nodrošinātu lietotāja pieslēguma elektroapgādi pret
+              kopējo VS slēgiekārtas pievienojumu skaitu (V_SP/KP).<br />
+              9.3.2. Ja lietotāja pieslēguma VS komercuzskaite tiek ierīkota
+              jaunā VS/KP vai esošā VS SP/KP, kur vienlaicīgi ar VS
+              komercuzskaites izbūvi tiek uzstādīta/nomainīta esošā VS
+              slēgiekārta, tad VS komercuzskaites izbūves faktiskās izmaksas
+              atsevišķi netiek izdalītas. Faktiskās izmaksas lietotājam tiek
+              noteiktas analogi kā punktā 9.3.1.<br />
+              9.3.3. Ja lietotāja pieslēguma VS komercuzskaite tiek ierīkota
+              esošā VS SP/KP, nemainot esošo VS slēgiekārtu, tad faktiskās
+              izmaksas pilnā apmērā attiecina uz lietotāju.
+            </div>
+          </div>
+        </div>
+        <div class="acardion-item">
+          <div class="acardion-item-header">
+            Par ZS tīklu izbūvi vai pārbūvi
+          </div>
+          <div class="acardion-item-body">
+            <div class="acardion-item-body-content">
+              9.1.1. Par jaunas ZS EPL izbūvi vai esošas ZS EPL pārbūvi
+              faktiskās izmaksas tiek aprēķinātas, ņemot vērā lietotājam
+              minimāli nepieciešamās ZS EPL (no ST pielietojamajiem
+              kabeļiem/piekarkabeļiem/kailvadiem) maksimāli pieļaujamās
+              aizsardzības aparāta nominālās strāvas lielumu (A_ZS, skatīt
+              2.tabulu) normālā režīma shēmā līdz barojošai TA, lai tiktu
+              nodrošināts dU% mazāks par 5%, pret izbūvējamās ZS EPL posma
+              maksimāli pieļaujamās aizsardzības aparāta nominālās strāvas
+              lielumu.<br />
+              9.1.2. Lietotājam minimāli nepieciešamās ZS EPL šķērsgriezums tiek
+              noteikts, izmantojot dU% aprēķina kalkulatoru, kurš atrodas
+              SharePoint vietnē
+              –https://stinfo.energo.lv/s/taf/objektuIzvertesanasProtokoli/SitePages/du.aspx
+              , pēc lietotāja pieslēguma atļautās slodzes (kW), ņemot vērā
+              kopējo ZS EPL elektrisko garumu no TA līdz pieslēguma vietai
+              (ieskaitot esošos EPL posmus). Ja aprēķinot faktiskās izmaksas un
+              nosakot minimāli nepieciešamo ZS EPL šķērsgriezumu pēc būvprojektā
+              paredzētā kopējā ZS EPL elektriskā garuma, dU% ir lielāks par 5%,
+              tad pieņem, ka tas ir lietotājam minimāli nepieciešamais ZS EPL
+              šķērsgriezums.
+            </div>
+          </div>
+        </div>
+        <div class="acardion-item">
+          <div class="acardion-item-header">Par TA (TP) izbūvi vai pārbūvi</div>
+          <div class="acardion-item-body">
+            <div class="acardion-item-body-content">
+              9.2.1. Par jaunas TA izbūvi vai esošas TA nomaiņu faktiskās
+              izmaksas lietotājam tiek aprēķinātas ņemot vērā A_piepr pret
+              uzstādāmā sadales transformatora ZS galvenā aizsardzības aparāta
+              nominālo strāvas lielumu A_TP (skatīt 3.tabulu).<br />
+              9.2.2. Par transformatora maiņu esošas TA konstrukcijā faktiskās
+              izmaksas lietotājam, tiek aprēķinātas, ņemot vērā A_piepr pret
+              uzstādāmā transformatora ZS galvenā aizsardzības aparāta nominālās
+              strāvas lielumu A_TP.<br />
+              9.2.3. Par esošas TA ZS sadalnes nomaiņu vai vismaz vienu kopņu
+              sekcijas rekonstrukciju faktiskās izmaksas lietotājam tiek
+              aprēķinātas, ņemot vērā A_piepr pret TA uzstādītā transformatora
+              ZS galvenā aizsardzības aparāta nominālās strāvas lielumu A_TP
+              konkrētā sekcijā/-ās.<br />
+              9.2.4. Par VS slēgiekārtas/slodzes slēdžu nomaiņu esošā TA
+              faktiskās izmaksas lietotājam tiek aprēķinātas, ņemot vērā A_piepr
+              pret TA uzstādītā transformatora/-u ZS galvenā aizsardzības
+              aparāta nominālās strāvas lielumu vai lielumu summu (ja tiek
+              veikta abu sekciju slēgiekārtu nomaiņa vai slodzes slēdžu izbūve
+              abās sekcijās) A_TP, ja pieslēguma barošana normālā shēmā ir no
+              šīs TA.<br />
+              9.2.5. Ja tiek uzstādīts KTA, kurš paredzēts viena lietotāja
+              pieslēguma nodrošināšanai (kabeļu pievienojuma vietas ZS sekcijā
+              ir paredzēti tikai lietotāja slodzes nodrošināšanai) un
+              izstrādājot TN pie šīs TA nav paredzēts pieslēgt esošos vai
+              perspektīvos lietotājus, faktiskās izmaksas pilnā apmērā attiecina
+              uz lietotāju.<br />
+              9.2.6. Ja tiek uzstādīts KTA ar robežu uz transformatora izvadiem,
+              kur ZS pusē transformatora galvenais un lietotāja IAA sakrīt, un
+              KTA paredzēta vienam lietotājam, tad visas faktiskās izmaksas tiek
+              attiecinātas uz Lietotāju.<br />
+              9.2.7. Ja tiek uzstādīts BTA ar vienu SZ slēdzi un BTA paredzēts
+              viena lietotāja pieslēguma nodrošināšanai (izstrādājot TN pie šīs
+              TA nav paredzēts pieslēgt esošos vai perspektīvos lietotājus),
+              faktiskās izmaksas pilnā apmērā attiecina uz lietotāju.
+            </div>
+          </div>
+        </div>
+        <div class="acardion-item">
+          <div class="acardion-item-header">
+            Citi faktisko izmaksu piemērošanas nosacījumi
+          </div>
+          <div class="acardion-item-body">
+            <div class="acardion-item-body-content">
+              9.6.1. Ja pieslēguma ierīkošanai būvprojektā ir paredzētas
+              faktiskās izmaksas par servitūta nodibināšanu, aprobežojuma līguma
+              noslēgšanu, atmežošanu u.tml., tad šīs izmaksas attiecina uz
+              lietotāja pieslēguma ierīkošanu un pieskaita attiecīgajai
+              elektrotīkla daļai, kura tiek izbūvēta/pārbūvēta.<br />
+              9.6.2. Ja pieslēguma būvprojektā paredzēto elektroietaišu
+              ierīkošanai nekustamo īpašumu izmanto tā īpašnieka īpašuma tiešai
+              elektroapgādei, izdevumus, kas saistīti ar aizsargjoslu, kā arī ar
+              aizsargjoslām saistīto nekustamo īpašumu apgrūtinājumu iezīmēšanu
+              zemes īpašuma vai lietojuma robežu plānā un apgrūtinājumu
+              ierakstīšanu zemesgrāmatā, sedz zemes īpašnieks.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./app.js"></script>
+  </body>
+</html>
